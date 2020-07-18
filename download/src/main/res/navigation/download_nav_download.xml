@@ -5,6 +5,6 @@
 
     <fragment
         android:id="@+id/downloadMainFragment"
-        android:name="com.jz.download.ui.fragments.DownloadMainFragment"
+        android:name="com.jz.download.ui.fragments.MainFragment"
         android:label="DownloadMainFragment" />
 </navigation>

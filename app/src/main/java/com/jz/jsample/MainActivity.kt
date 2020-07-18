@@ -1,11 +1,14 @@
 package com.jz.jsample
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.Navigation
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.jz.base.AppPath
+import com.jz.base.ui.BaseARouterActivity
 
+@Route(path = AppPath.MAIN_ACTIVITY)
+class MainActivity : BaseARouterActivity() {
 
-class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.app_activity_main)
