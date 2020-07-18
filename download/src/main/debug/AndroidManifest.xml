@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.jz.download">
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true">
+        <activity android:name=".ui.activities.DownloadMainActivity" />
+
+    </application>
+
+
+</manifest>
