@@ -3,7 +3,7 @@ package com.jz.jsample
 import android.os.Bundle
 import androidx.navigation.Navigation
 import com.alibaba.android.arouter.facade.annotation.Route
-import com.jz.base.AppPath
+import com.jz.base.arouter.AppPath
 import com.jz.base.ui.BaseARouterActivity
 
 @Route(path = AppPath.MAIN_ACTIVITY)

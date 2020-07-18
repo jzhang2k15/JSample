@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.navigation.Navigation
 import com.alibaba.android.arouter.facade.annotation.Autowired
 import com.alibaba.android.arouter.facade.annotation.Route
-import com.jz.base.DownloadPath
+import com.jz.base.arouter.DownloadPath
 import com.jz.base.LogJ
 import com.jz.base.ui.BaseARouterActivity
 import com.jz.download.R
@@ -17,28 +17,22 @@ import com.jz.download.R
 @Route(path = DownloadPath.MAIN_ACTIVITY)
 class MainActivity : BaseARouterActivity() {
 
-
     @JvmField
     @Autowired(name = "stringKey")
-    var stringKey: String? = null
+    var stringParam: String? = null
 
     @JvmField
     @Autowired(name = "intKey")
-    var intKey: Int? = null
+    var intParam: String? = "-1"
 
     @JvmField
     @Autowired(name = "booleanKey")
-    var booleanKey: Boolean? = null
+    var booleanParam: String? = "false"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.download_activity_main)
-
-        LogJ.d("接收到的参数为: stringKey = $stringKey, intKey = $intKey, booleanKey = $booleanKey")
-        val stringExtra = intent.getStringExtra("stringKey")
-        val intExtra = intent.getIntExtra("intKey", -1)
-        val booleanExtra = intent.getBooleanExtra("booleanKey", false)
-        LogJ.d("从 Intent 获取到的参数: stringExtra = $stringExtra, intExtra = $intExtra, booleanExtra = $booleanExtra")
+        LogJ.d("接收到的参数为: stringParam = $stringParam, intParam = $intParam, booleanParam = $booleanParam")
     }
 
     override fun onSupportNavigateUp(): Boolean {

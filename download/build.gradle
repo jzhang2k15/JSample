@@ -33,9 +33,9 @@ android {
     sourceSets {
         main {
             if (isUserModule) {
-                manifest.srcFile 'src/main/release/AndroidManifest.xml'
-            } else {
                 manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/release/AndroidManifest.xml'
             }
         }
     }

@@ -2,9 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.jz.download">
 
-    <application
-        android:allowBackup="true"
-        android:supportsRtl="true">
+    <application>
         <activity android:name=".ui.activities.MainActivity" />
 
     </application>

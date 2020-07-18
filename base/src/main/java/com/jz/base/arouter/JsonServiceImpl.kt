@@ -1,4 +1,4 @@
-package com.jz.base
+package com.jz.base.arouter
 
 import android.content.Context
 import com.alibaba.android.arouter.facade.annotation.Route

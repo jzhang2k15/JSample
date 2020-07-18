@@ -1,16 +1,27 @@
-package com.jz.base
+package com.jz.base.arouter
 
 import com.alibaba.android.arouter.launcher.ARouter
+import com.jz.base.LogJ
+import com.jz.base.initAny
 
 
 /**
  * @author zhange
  * @date 2020/7/18.
  * description：ARouter 的工具类
+ * 这部分的逻辑其实跟 base module 无关，应该提取出去
  */
 
+fun gotoDownloadMainActivity(string: String, int: Int, boolean: Boolean) {
+    goto(DownloadPath.MAIN_ACTIVITY) {
+        put("stringKey", "testString")
+        put("intKey", "testInt")
+//        put("booleanKey", "testBoolean")
+    }
+}
+
 /*路由跳转*/
-fun goto(
+private fun goto(
     path: String,
     paramsFunction: (HashMap<String, Any>.() -> Unit)? = null
 ) {
@@ -40,9 +51,8 @@ fun goto(
     navigation.navigation()
 }
 
-/*路由提取参数*/
 
-
+// =============================== 所有的 ARouter 路径都写在这里 ======================================
 object AppPath {
     const val GROUP = "app"
     const val MAIN_ACTIVITY = "/app/main_activity"
