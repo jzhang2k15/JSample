@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.navigation.Navigation
 import com.alibaba.android.arouter.facade.annotation.Autowired
 import com.alibaba.android.arouter.facade.annotation.Route
-import com.jz.base.arouter.DownloadPath
+import com.jz.base.arouter.DownloadARouterPath
 import com.jz.base.LogJ
 import com.jz.base.ui.BaseARouterActivity
 import com.jz.download.R
@@ -14,7 +14,7 @@ import com.jz.download.R
  * @date 2020/7/17.
  * description：
  */
-@Route(path = DownloadPath.MAIN_ACTIVITY)
+@Route(path = DownloadARouterPath.MAIN_ACTIVITY)
 class MainActivity : BaseARouterActivity() {
 
     @JvmField

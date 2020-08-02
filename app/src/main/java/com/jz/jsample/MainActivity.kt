@@ -3,10 +3,10 @@ package com.jz.jsample
 import android.os.Bundle
 import androidx.navigation.Navigation
 import com.alibaba.android.arouter.facade.annotation.Route
-import com.jz.base.arouter.AppPath
+import com.jz.base.arouter.AppARouterPath
 import com.jz.base.ui.BaseARouterActivity
 
-@Route(path = AppPath.MAIN_ACTIVITY)
+@Route(path = AppARouterPath.MAIN_ACTIVITY)
 class MainActivity : BaseARouterActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -61,8 +61,26 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:$jetpack_version"
     implementation "androidx.navigation:navigation-ui-ktx:$jetpack_version"
 
+    // AndroidUtils
+    implementation 'com.blankj:utilcodex:1.29.0'
+
     // ARouter
     implementation 'com.alibaba:arouter-api:1.5.0'
     kapt 'com.alibaba:arouter-compiler:1.2.2'
+
+    // FileDownloader
+    // core
+    implementation "com.liulishuo.okdownload:okdownload:$filedownloader_version"
+    // provide sqlite to store breakpoints
+    implementation "com.liulishuo.okdownload:sqlite:$filedownloader_version"
+    // provide okhttp to connect to backend
+    // and then please import okhttp dependencies by yourself
+    implementation "com.liulishuo.okdownload:okhttp:$filedownloader_version"
+    // provide interface to match filedownloader
+    implementation "com.liulishuo.okdownload:filedownloader:$filedownloader_version"
+    // provide interface for kotlin extension
+    implementation "com.liulishuo.okdownload:ktx:$filedownloader_version"
+    // If you are using com.liulishuo.okdownload:okhttp
+//    implementation 'com.squareup.okhttp3:okhttp:3.12.1'
 
 }

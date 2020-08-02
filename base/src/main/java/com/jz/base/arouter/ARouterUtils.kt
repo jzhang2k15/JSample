@@ -13,11 +13,15 @@ import com.jz.base.initAny
  */
 
 fun gotoDownloadMainActivity(string: String, int: Int, boolean: Boolean) {
-    goto(DownloadPath.MAIN_ACTIVITY) {
+    goto(DownloadARouterPath.MAIN_ACTIVITY) {
         put("stringKey", "testString")
         put("intKey", "testInt")
-//        put("booleanKey", "testBoolean")
+        put("booleanKey", "testBoolean")
     }
+}
+
+fun gotoAppTestActivity() {
+    goto(AppARouterPath.TEST_ACTIVITY)
 }
 
 /*路由跳转*/
@@ -53,12 +57,13 @@ private fun goto(
 
 
 // =============================== 所有的 ARouter 路径都写在这里 ======================================
-object AppPath {
+object AppARouterPath {
     const val GROUP = "app"
     const val MAIN_ACTIVITY = "/app/main_activity"
+    const val TEST_ACTIVITY = "/app/test_activity"
 }
 
-object DownloadPath {
+object DownloadARouterPath {
     const val GROUP = "download"
     const val MAIN_ACTIVITY = "/download/main_activity"
 }
