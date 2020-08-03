@@ -12,7 +12,7 @@ import com.jz.base.initAny
  * 这部分的逻辑其实跟 base module 无关，应该提取出去
  */
 
-fun gotoDownloadMainActivity(string: String, int: Int, boolean: Boolean) {
+fun gotoDownloadMainActivity(string: String, int: String, boolean: String) {
     goto(DownloadARouterPath.MAIN_ACTIVITY) {
         put("stringKey", "testString")
         put("intKey", "testInt")

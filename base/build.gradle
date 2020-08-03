@@ -50,4 +50,7 @@ dependencies {
     // Gson
     api 'com.google.code.gson:gson:2.8.6'
 
+    // lifecycle
+    api "android.arch.lifecycle:extensions:1.1.1"
+
 }
