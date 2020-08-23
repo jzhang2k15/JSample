@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="wanandroid_colorPrimary">#3771BB</color>
+    <color name="wanandroid_colorPrimaryDark">#3771BB</color>
+    <color name="wanandroid_colorAccent">#3771BB</color>
+
+    <color name="wanandroid_color_3">#333333</color>
+    <color name="wanandroid_color_6">#666666</color>
+    <color name="wanandroid_color_9">#999999</color>
+</resources>

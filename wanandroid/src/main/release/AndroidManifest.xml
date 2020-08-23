@@ -1,0 +1,23 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jz.wanandroid">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/wanandroid_ic_launcher"
+        android:label="@string/wanandroid_name"
+        android:roundIcon="@mipmap/wanandroid_ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/WanAndroidAppTheme">
+        <activity
+            android:name=".ui.HomeActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+    </application>
+</manifest>

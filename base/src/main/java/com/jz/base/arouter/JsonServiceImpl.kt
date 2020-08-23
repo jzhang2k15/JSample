@@ -9,7 +9,7 @@ import java.lang.reflect.Type
 /**
  * @author zhange
  * @date 2020/7/18.
- * description：
+ * description：用来传递实体类的，还没有测试
  */
 @Route(path = JsonConst.PATH)
 class JsonServiceImpl : SerializationService {

@@ -8,7 +8,7 @@ import java.io.File
  * description：
  */
 abstract class FileHandlerDecorator(private val mFileHandler: FileHandler) : FileHandler {
-    protected val TAG = FileHandlerDecorator::class.java.simpleName
+    protected val TAG = FileHandlerDecorator::class.java.name
 
     override fun handle(file: File?): File? {
         return mFileHandler.handle(file)

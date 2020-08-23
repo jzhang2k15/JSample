@@ -1,3 +1,5 @@
+include ':wanandroid'
+include ':camera'
 include ':base'
 include ':download'
 include ':app'

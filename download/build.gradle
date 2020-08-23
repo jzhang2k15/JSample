@@ -39,6 +39,11 @@ android {
             }
         }
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 kapt {
@@ -60,9 +65,6 @@ dependencies {
 
     implementation "androidx.navigation:navigation-fragment-ktx:$jetpack_version"
     implementation "androidx.navigation:navigation-ui-ktx:$jetpack_version"
-
-    // AndroidUtils
-    implementation 'com.blankj:utilcodex:1.29.0'
 
     // ARouter
     implementation 'com.alibaba:arouter-api:1.5.0'

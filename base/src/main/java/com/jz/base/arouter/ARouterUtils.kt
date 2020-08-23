@@ -11,7 +11,7 @@ import com.jz.base.initAny
  * description：ARouter 的工具类
  * 这部分的逻辑其实跟 base module 无关，应该提取出去
  */
-
+// ============================= 所有的跳转都写在这里 ==========================
 fun gotoDownloadMainActivity(string: String, int: String, boolean: String) {
     goto(DownloadARouterPath.MAIN_ACTIVITY) {
         put("stringKey", "testString")
@@ -20,8 +20,15 @@ fun gotoDownloadMainActivity(string: String, int: String, boolean: String) {
     }
 }
 
+/*跳转到 App 模块的 TestActivity*/
 fun gotoAppTestActivity() {
     goto(AppARouterPath.TEST_ACTIVITY)
+}
+
+
+/*跳转到 wanandroid 的 HomeActivity*/
+fun gotoWAHomeActivity() {
+    goto(WanAndroidPath.HOME_ACTIVITY)
 }
 
 /*路由跳转*/
@@ -66,6 +73,10 @@ object AppARouterPath {
 object DownloadARouterPath {
     const val GROUP = "download"
     const val MAIN_ACTIVITY = "/download/main_activity"
+}
+
+object WanAndroidPath {
+    const val HOME_ACTIVITY = "/wanandroid/home_activity"
 }
 
 object JsonConst {

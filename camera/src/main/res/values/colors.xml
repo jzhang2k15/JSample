@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="camera_colorPrimary">#3771BB</color>
+    <color name="camera_colorPrimaryDark">#3771BB</color>
+    <color name="camera_colorAccent">#3771BB</color>
+</resources>

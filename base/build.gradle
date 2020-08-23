@@ -23,6 +23,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        dataBinding = true
+    }
+
 }
 
 kapt {
@@ -34,14 +44,17 @@ kapt {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.3.0'
-    implementation "androidx.appcompat:appcompat:$appcompat_version"
+    implementation enforcedPlatform('androidx.core:core-ktx:1.3.1')
+    implementation enforcedPlatform("androidx.appcompat:appcompat:$appcompat_version")
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     implementation "androidx.navigation:navigation-fragment-ktx:$jetpack_version"
     implementation "androidx.navigation:navigation-ui-ktx:$jetpack_version"
+
+    // AndroidUtils
+    api 'com.blankj:utilcodex:1.29.0'
 
     // ARouter
     implementation 'com.alibaba:arouter-api:1.5.0'
@@ -52,5 +65,9 @@ dependencies {
 
     // lifecycle
     api "android.arch.lifecycle:extensions:1.1.1"
+
+    // retrofit
+    api 'com.squareup.retrofit2:retrofit:2.4.0'
+    api 'com.squareup.retrofit2:converter-gson:2.4.0'
 
 }

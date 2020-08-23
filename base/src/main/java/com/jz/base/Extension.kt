@@ -2,6 +2,10 @@ package com.jz.base
 
 import android.content.Context
 import android.widget.Toast
+import androidx.annotation.LayoutRes
+import androidx.databinding.ViewDataBinding
+import com.jz.base.adapter.easy.EasyAdapter
+import com.jz.base.adapter.easy.EasyHolderCreatorDSL
 
 /**
  * @author zhange
@@ -26,4 +30,11 @@ fun String.toastLong(context: Context) {
 fun <T> initAny(any: T, init: T.() -> Unit): T {
     any.init()
     return any
+}
+
+fun <T, B : ViewDataBinding> EasyAdapter<T>.addItem(@LayoutRes resource: Int, init: EasyHolderCreatorDSL<T, B>.() -> Unit):
+        EasyAdapter<T> = apply {
+    val dsl = EasyHolderCreatorDSL<T, B>(resource)
+    dsl.init()
+    register(dsl)
 }

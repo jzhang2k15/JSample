@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/wanandroid_nav_article.xml"
+    app:startDestination="@id/wanandroid_mix_fragment">
+
+    <fragment
+        android:id="@+id/wanandroid_video_list_fragment"
+        android:name="com.jz.wanandroid.ui.fragments.VideoListFragment"
+        android:label="VideoListFragment" />
+    <fragment
+        android:id="@+id/wanandroid_article_fragments"
+        android:name="com.jz.wanandroid.ui.fragments.ArticleFragments"
+        android:label="ArticleFragments" />
+    <fragment
+        android:id="@+id/wanandroid_mix_fragment"
+        android:name="com.jz.wanandroid.ui.fragments.MixFragment"
+        android:label="MixFragment" />
+</navigation>

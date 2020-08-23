@@ -1,0 +1,10 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="WanAndroidAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/wanandroid_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/wanandroid_colorPrimaryDark</item>
+        <item name="colorAccent">@color/wanandroid_colorAccent</item>
+    </style>
+
+</resources>

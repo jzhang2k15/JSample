@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.jz.base.arouter.gotoAppTestActivity
 import com.jz.base.arouter.gotoDownloadMainActivity
+import com.jz.base.arouter.gotoWAHomeActivity
 import kotlinx.android.synthetic.main.app_fragment_main.*
 
 /**
@@ -25,7 +26,8 @@ class MainFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         tvMain.postDelayed({
-            gotoAppTestActivity()
+            gotoWAHomeActivity()
+//            gotoAppTestActivity()
 //            gotoDownloadMainActivity("testStr", 100, true)
 //            requireActivity().finish()
         }, 1000)
