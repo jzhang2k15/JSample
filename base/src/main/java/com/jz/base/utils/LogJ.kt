@@ -1,6 +1,7 @@
-package com.jz.base
+package com.jz.base.utils
 
 import android.util.Log
+import com.jz.base.BuildConfig
 
 /**
  * @author zhange
@@ -20,7 +21,7 @@ object LogJ {
     }
 
     fun d(msg: String) {
-        if (DEBUG) LogJ.d(TAG, msg)
+        if (DEBUG) d(TAG, msg)
     }
 
     fun w(msg: String) {

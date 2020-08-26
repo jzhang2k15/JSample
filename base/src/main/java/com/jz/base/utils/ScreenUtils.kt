@@ -1,4 +1,4 @@
-package com.jz.base
+package com.jz.base.utils
 
 import android.content.res.Resources
 import android.util.TypedValue

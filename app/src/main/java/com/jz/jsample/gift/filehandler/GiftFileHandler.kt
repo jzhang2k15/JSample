@@ -1,7 +1,7 @@
 package com.jz.jsample.gift.filehandler
 
 import com.blankj.utilcode.util.FileUtils
-import com.jz.base.LogJ
+import com.jz.base.utils.LogJ
 import com.jz.download.utils.handle.FileHandler
 import com.jz.download.utils.handle.FileHandlerDecorator
 import com.jz.jsample.gift.FILE_GIFT_LOTTIE_IMAGE

@@ -4,11 +4,11 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.jz.base.LogJ
+import com.jz.base.utils.LogJ
 import com.jz.base.adapter.SimpleAdapter
 import com.jz.wanandroid.bean.WXArticleBean
-import com.jz.base.logd
-import com.jz.base.parseJsonString
+import com.jz.base.utils.logd
+import com.jz.base.utils.parseJsonString
 import com.jz.base.ui.BaseFragment
 import com.jz.wanandroid.R
 import com.jz.wanandroid.databinding.WanandroidItemArticleBinding

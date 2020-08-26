@@ -5,7 +5,7 @@ import androidx.navigation.Navigation
 import com.alibaba.android.arouter.facade.annotation.Autowired
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.jz.base.arouter.DownloadARouterPath
-import com.jz.base.LogJ
+import com.jz.base.utils.LogJ
 import com.jz.base.ui.BaseARouterActivity
 import com.jz.download.R
 

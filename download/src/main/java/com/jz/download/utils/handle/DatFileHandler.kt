@@ -1,6 +1,6 @@
 package com.jz.download.utils.handle
 
-import com.jz.base.LogJ
+import com.jz.base.utils.LogJ
 import com.jz.download.FILE_POSTFIX_DAT
 import com.jz.download.FILE_POSTFIX_ZIP
 import java.io.File

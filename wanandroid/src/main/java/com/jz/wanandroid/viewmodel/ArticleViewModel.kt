@@ -4,8 +4,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.jz.wanandroid.bean.WXArticleBean
 import com.jz.base.http.enqueue
-import com.jz.base.logd
-import com.jz.base.parseJsonString
+import com.jz.base.utils.logd
+import com.jz.base.utils.parseJsonString
 import com.jz.wanandroid.http.WanAndroidApi
 
 /**

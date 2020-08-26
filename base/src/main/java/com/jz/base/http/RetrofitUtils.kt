@@ -1,6 +1,6 @@
 package com.jz.base.http
 
-import com.jz.base.LogJ
+import com.jz.base.utils.LogJ
 import com.jz.base.getType
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit

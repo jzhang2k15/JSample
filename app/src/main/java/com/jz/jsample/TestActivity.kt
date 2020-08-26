@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.alibaba.android.arouter.facade.annotation.Route
-import com.jz.base.LogJ
+import com.jz.base.utils.LogJ
 import com.jz.base.arouter.AppARouterPath
 import com.jz.base.ui.BaseARouterActivity
 import com.jz.download.utils.DownloadUtils

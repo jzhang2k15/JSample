@@ -4,7 +4,7 @@ import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.jz.base.LogJ
+import com.jz.base.utils.LogJ
 import com.jz.base.adapter.easy.EasyAdapter
 import com.jz.base.addItem
 import com.jz.base.ui.BaseFragment

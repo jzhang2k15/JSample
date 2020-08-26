@@ -1,7 +1,7 @@
 package com.jz.download.utils.handle
 
 import com.blankj.utilcode.util.ZipUtils
-import com.jz.base.LogJ
+import com.jz.base.utils.LogJ
 import java.io.File
 import java.io.IOException
 

@@ -1,4 +1,4 @@
-package com.jz.base
+package com.jz.base.utils
 
 import android.content.Context
 import android.graphics.Color

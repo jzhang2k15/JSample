@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/wanandroid_nav_article.xml"
-    app:startDestination="@id/wanandroid_mix_fragment">
+    app:startDestination="@id/wanandroid_album_fragment">
 
     <fragment
         android:id="@+id/wanandroid_video_list_fragment"
@@ -16,4 +16,8 @@
         android:id="@+id/wanandroid_mix_fragment"
         android:name="com.jz.wanandroid.ui.fragments.MixFragment"
         android:label="MixFragment" />
+    <fragment
+        android:id="@+id/wanandroid_album_fragment"
+        android:name="com.jz.wanandroid.ui.fragments.AlbumFragment"
+        android:label="AlbumFragment" />
 </navigation>

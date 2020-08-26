@@ -1,6 +1,7 @@
-package com.jz.base
+package com.jz.base.utils
 
 import com.google.gson.Gson
+import com.jz.base.getType
 
 /**
  * @author zhange

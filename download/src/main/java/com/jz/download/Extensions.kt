@@ -1,6 +1,6 @@
 package com.jz.download
 
-import com.jz.base.LogJ
+import com.jz.base.utils.LogJ
 import com.jz.base.utils.BigDecimalUtils
 import com.jz.download.utils.handle.DownloadListenerDSL
 

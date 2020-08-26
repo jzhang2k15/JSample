@@ -1,7 +1,7 @@
 package com.jz.base.arouter
 
 import com.alibaba.android.arouter.launcher.ARouter
-import com.jz.base.LogJ
+import com.jz.base.utils.LogJ
 import com.jz.base.initAny
 
 
