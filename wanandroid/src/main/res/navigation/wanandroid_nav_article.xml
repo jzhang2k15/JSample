@@ -2,12 +2,15 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/wanandroid_nav_article.xml"
-    app:startDestination="@id/wanandroid_album_fragment">
+    app:startDestination="@id/wanandroid_album_list_fragment">
 
     <fragment
         android:id="@+id/wanandroid_video_list_fragment"
         android:name="com.jz.wanandroid.ui.fragments.VideoListFragment"
-        android:label="VideoListFragment" />
+        android:label="VideoListFragment">
+
+
+    </fragment>
     <fragment
         android:id="@+id/wanandroid_article_fragments"
         android:name="com.jz.wanandroid.ui.fragments.ArticleFragments"
@@ -20,4 +23,22 @@
         android:id="@+id/wanandroid_album_fragment"
         android:name="com.jz.wanandroid.ui.fragments.AlbumFragment"
         android:label="AlbumFragment" />
+    <fragment
+        android:id="@+id/wanandroid_album_list_fragment"
+        android:name="com.jz.wanandroid.ui.fragments.AlbumListFragment"
+        android:label="AlbumListFragment">
+
+        <action
+            android:id="@+id/action_to_album_fragment"
+            app:destination="@id/wanandroid_album_fragment"
+            app:enterAnim="@anim/h_fragment_enter"
+            app:exitAnim="@anim/h_fragment_exit"
+            app:popEnterAnim="@anim/h_fragment_pop_enter"
+            app:popExitAnim="@anim/h_fragment_pop_exit" />
+
+        <argument
+            android:name="name"
+            app:argType="string" />
+
+    </fragment>
 </navigation>

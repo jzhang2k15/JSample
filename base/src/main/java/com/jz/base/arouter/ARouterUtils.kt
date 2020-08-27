@@ -32,10 +32,7 @@ fun gotoWAHomeActivity() {
 }
 
 /*路由跳转*/
-private fun goto(
-    path: String,
-    paramsFunction: (HashMap<String, Any>.() -> Unit)? = null
-) {
+private fun goto(path: String, paramsFunction: (HashMap<String, Any>.() -> Unit)? = null) {
     // 拿到 navigation 对象
     val navigation = ARouter.getInstance().build(path).apply {
         // 如果参数不为空

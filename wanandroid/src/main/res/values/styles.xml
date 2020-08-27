@@ -1,6 +1,6 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="WanAndroidAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="WanAndroidAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/wanandroid_colorPrimary</item>
         <item name="colorPrimaryDark">@color/wanandroid_colorPrimaryDark</item>

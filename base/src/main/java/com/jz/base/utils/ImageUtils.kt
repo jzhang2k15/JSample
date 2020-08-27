@@ -1,11 +1,8 @@
 package com.jz.base.utils
 
-import android.content.ContentUris
 import android.content.Context
 import android.graphics.BitmapFactory
 import android.net.Uri
-import android.os.Build
-import android.provider.MediaStore
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 
@@ -17,14 +14,14 @@ import com.bumptech.glide.Glide
 object ImageUtils {
 
     // 普通的加载图片
-    fun load(context: Context, uri: String, imageView: ImageView) {
+    fun load(context: Context, uri: String?, imageView: ImageView) {
         Glide.with(context)
                 .load(uri)
                 .into(imageView)
     }
 
     // 普通的加载图片
-    fun load(context: Context, uri: Uri, imageView: ImageView) {
+    fun load(context: Context, uri: Uri?, imageView: ImageView) {
         Glide.with(context)
                 .load(uri)
                 .into(imageView)

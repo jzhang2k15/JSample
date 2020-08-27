@@ -60,8 +60,6 @@ class VideoListFragment : BaseFragment() {
                     }
                 }
                 .attach(rvVideo)
-                .refreshDataAndNotify(mutableListOf())
-
     }
 
     override fun initData() {

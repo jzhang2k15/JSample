@@ -5,7 +5,9 @@ import android.content.Context
 import android.net.Uri
 import android.os.Build
 import android.provider.MediaStore
+import com.jz.base.initAny
 import com.jz.base.utils.FileUtils
+import com.jz.wanandroid.bean.AlbumBean
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
@@ -18,12 +20,12 @@ object AlbumUtils {
 
 
     private const val ALL = "all"
-    private val mAlbumMap by lazy { HashMap<String, ArrayList<Uri>>() }
+    private val mAlbumMap by lazy { HashMap<String, AlbumBean>() }
 
     /**
      * 根据相册名称去访问不同的相册
      */
-    suspend fun albumIntent(context: Context, albumName: String = ALL): ArrayList<Uri> = withContext(Dispatchers.IO) {
+    suspend fun albumIntent(context: Context, albumName: String = ALL): AlbumBean = withContext(Dispatchers.IO) {
         // 假如缓存里面有的话，则直接拿缓存的列表
         if (mAlbumMap.isNotEmpty() && mAlbumMap.keys.contains(albumName)) {
             mAlbumMap[albumName]!!
@@ -53,19 +55,22 @@ object AlbumUtils {
     }
 
     /**
-     * 把父目录和 uri 关联起来
+     * 把相册和 uri 关联起来
      */
     private fun relatedDir(parentDir: String, uri: Uri) {
-        var list = mAlbumMap[parentDir]
-        if (list == null) {
-            list = ArrayList()
-            mAlbumMap[parentDir] = list
+        // 根据相册名拿到对应的实体类
+        var album = mAlbumMap[parentDir]
+        if (album == null) {
+            album = AlbumBean(parentDir, uri).also {
+                mAlbumMap[parentDir] = it
+            }
         }
-        list.add(uri)
+        // 相册里面添加 uri
+        album.addPhotos(uri)
     }
 
     /**
      * 获取相册目录
      */
-    fun getAlbumDirs(): ArrayList<String> = ArrayList(mAlbumMap.keys)
+    fun getAlbumDirs(): ArrayList<AlbumBean> = ArrayList(mAlbumMap.values)
 }

@@ -56,7 +56,6 @@ class MixFragment : BaseFragment() {
                     }
                 }
                 .attach(rvMix)
-                .refreshDataAndNotify(mutableListOf())
     }
 
     override fun initData() {

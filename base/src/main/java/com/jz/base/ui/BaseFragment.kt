@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.LayoutRes
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
 
 /**
  * @author zhange
@@ -18,10 +20,10 @@ abstract class BaseFragment : Fragment() {
     protected abstract fun getLayoutId(): Int
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View = inflater.inflate(getLayoutId(), container, false)
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?): View = inflater.inflate(getLayoutId(),
+            container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -34,6 +36,8 @@ abstract class BaseFragment : Fragment() {
 
     /*用来初始化页面数据加载*/
     open fun initData() {}
+
+    fun nav(): NavController = NavHostFragment.findNavController(this)
 
 
 }
