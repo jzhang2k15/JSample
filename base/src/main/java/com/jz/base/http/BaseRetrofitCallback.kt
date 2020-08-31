@@ -13,8 +13,8 @@ import retrofit2.Response
  */
 open class BaseRetrofitCallback<T> : Callback<T> {
 
-    private var onSuccess: ((data: T) -> Unit)? = null
-    private var onError: ((call: Call<T>, t: Throwable) -> Unit)? = null
+    protected var onSuccess: ((data: T) -> Unit)? = null
+    protected var onError: ((call: Call<T>, t: Throwable) -> Unit)? = null
 
     override fun onResponse(call: Call<T>, response: Response<T>) {
         // 过滤 http 请求不成功的情况，以及返回体为空的情况

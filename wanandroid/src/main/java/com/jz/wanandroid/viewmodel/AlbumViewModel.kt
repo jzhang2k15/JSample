@@ -6,9 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.jz.wanandroid.bean.AlbumBean
 import com.jz.wanandroid.utils.AlbumUtils
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 
 /**
  * @author zhange
@@ -25,7 +23,7 @@ class AlbumViewModel : ViewModel() {
 
     // 获取相册
     fun fetchAlbum(context: Context) {
-        CoroutineScope(Dispatchers.Main).launch {
+        MainScope().launch {
             AlbumUtils.albumIntent(context)
             mAlbumList.postValue(AlbumUtils.getAlbumDirs())
         }
@@ -33,7 +31,7 @@ class AlbumViewModel : ViewModel() {
 
     // 获取具体相册下面的图片列表
     fun fetchPhotos(context: Context, albumName: String){
-        CoroutineScope(Dispatchers.Main).launch {
+        MainScope().launch {
             val album = AlbumUtils.albumIntent(context, albumName)
             mPhotoList.postValue(album.photos)
         }

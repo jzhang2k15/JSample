@@ -35,9 +35,6 @@ class MainFragment : BaseFragment() {
                         binding.tvModule.text = data.name
                         binding.tvModule.setOnClickListener {
                             gotoWAHomeActivity()
-//                            gotoAppTestActivity()
-//                            gotoDownloadMainActivity("testStr", 100, true)
-//                            requireActivity().finish()
                         }
                     }
                 }

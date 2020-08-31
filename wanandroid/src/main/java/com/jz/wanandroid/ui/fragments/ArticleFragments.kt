@@ -14,6 +14,9 @@ import com.jz.wanandroid.R
 import com.jz.wanandroid.databinding.WanandroidItemArticleBinding
 import com.jz.wanandroid.viewmodel.ArticleViewModel
 import kotlinx.android.synthetic.main.wanandroid_fragmnet_article.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.MainScope
+import kotlinx.coroutines.launch
 
 /**
  * @author zhange
@@ -33,7 +36,6 @@ class ArticleFragments : BaseFragment() {
                 LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         mAdapter = object : SimpleAdapter<WXArticleBean, WanandroidItemArticleBinding>(requireContext(), R.layout.wanandroid_item_article) {
             override fun onBindItem(binding: WanandroidItemArticleBinding, item: WXArticleBean, holder: RecyclerView.ViewHolder) {
-                item.parseJsonString().logd()
                 binding.tvName.text = item.name
                 holder.itemView.setOnClickListener { }
             }
@@ -45,9 +47,10 @@ class ArticleFragments : BaseFragment() {
         mArticleViewModel.mArticleListLiveData.observe(viewLifecycleOwner, Observer {
             mAdapter?.mData = it
             mAdapter?.notifyDataSetChanged()
-            LogJ.d("拿到了新数据, ${mAdapter?.mData}")
         })
-        mArticleViewModel.getArticleList()
+        MainScope().launch {
+            mArticleViewModel.getArticleList()
+        }
     }
 
 

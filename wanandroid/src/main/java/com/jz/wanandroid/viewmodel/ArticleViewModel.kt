@@ -2,11 +2,11 @@ package com.jz.wanandroid.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.jz.wanandroid.bean.WXArticleBean
-import com.jz.base.http.enqueue
+import com.jz.base.utils.LogJ
 import com.jz.base.utils.logd
 import com.jz.base.utils.parseJsonString
-import com.jz.wanandroid.http.WanAndroidApi
+import com.jz.wanandroid.bean.WXArticleBean
+import com.jz.wanandroid.repository.WXArticleRepository
 
 /**
  * @author zhange
@@ -15,17 +15,14 @@ import com.jz.wanandroid.http.WanAndroidApi
  */
 class ArticleViewModel : ViewModel() {
 
+    private val mWXArticleRepository by lazy { WXArticleRepository() }
+
     /*公众号列表*/
     val mArticleListLiveData: MutableLiveData<List<WXArticleBean>> = MutableLiveData()
 
     /*获取公众号列表*/
-    fun getArticleList() {
-        val call = WanAndroidApi.getApi().getWXArticleList()
-        call.enqueue {
-            onSuccess {
-                it.parseJsonString().logd()
-                mArticleListLiveData.postValue(it.data)
-            }
-        }
+    suspend fun getArticleList() {
+        val list = mWXArticleRepository.getWXArticle()
+        mArticleListLiveData.postValue(list)
     }
 }
