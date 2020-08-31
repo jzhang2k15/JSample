@@ -21,6 +21,7 @@ abstract class BaseRepository {
     suspend fun <T> apiCall(call: suspend () -> BaseBean<T>): BaseBean<T> {
         return withContext(mScope) {
             // 在 mJob 协程发起网络请求，获取数据
+            LogJ.d("发起网络请求")
             call.invoke()
         }
     }
@@ -36,7 +37,13 @@ abstract class BaseRepository {
     }
 
     fun cancelAllJobs() {
-        mJob.cancel()
+        // 取消 job 时，会把它标记成 completed 的状态。在 completed 的 job 的域中启动的协程，将不会被执行
+        mJob.cancel()// 不推荐使用
+
+        // 使用下面两个之一，原理一样，去取消子 Job，但是不改变自身的状态
+//        mJob.cancelChildren()
+        mScope.cancelChildren()
+        LogJ.d("取消网络请求")
     }
 
 }
