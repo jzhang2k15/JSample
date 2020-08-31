@@ -1,15 +1,7 @@
 package com.jz.jsample
 
-import android.content.pm.ModuleInfo
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import com.jz.base.adapter.easy.EasyAdapter
 import com.jz.base.addItem
-import com.jz.base.arouter.gotoAppTestActivity
-import com.jz.base.arouter.gotoDownloadMainActivity
 import com.jz.base.arouter.gotoWAHomeActivity
 import com.jz.base.ui.BaseFragment
 import com.jz.jsample.bean.ModuleBean
@@ -26,9 +18,9 @@ class MainFragment : BaseFragment() {
     private var mAdapter: EasyAdapter<ModuleBean>? = null
 
     private val mList by lazy {
-        ArrayList<ModuleBean>().also {
-            it.add(ModuleBean(it.size, "Album"))
-        }
+        ArrayList<ModuleBean>().apply {
+            add(ModuleBean(this.size, "Album"))
+        }.apply {  }
     }
 
     override fun getLayoutId(): Int = R.layout.app_fragment_main
