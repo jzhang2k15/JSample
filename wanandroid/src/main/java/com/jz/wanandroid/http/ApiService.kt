@@ -17,7 +17,7 @@ interface ApiService {
 
     // 获取公众号列表
     @GET("wxarticle/chapters/json")
-    suspend fun getWXArticleList(): BaseBean<List<WXArticleBean>>
+    suspend fun getWXArticleList(): BaseBean<MutableList<WXArticleBean>>
 
     // 获取指定 id 公众号的历史数据，page 为页数
     @GET("wxarticle/list/{id}/page/json")

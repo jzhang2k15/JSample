@@ -7,7 +7,7 @@ package com.jz.wanandroid.bean.base
  */
 class PageBean<T>(
         val curPage: Int,
-        val datas: List<T>,
+        val datas: MutableList<T>,
         val offset: Int,
         val over: Int,
         val pageCount: Int,

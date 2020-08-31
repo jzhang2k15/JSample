@@ -22,8 +22,6 @@ abstract class BaseRepository {
         return withContext(mScope) {
             // 在 mJob 协程发起网络请求，获取数据
             call.invoke()
-        }.apply {
-            LogJ.d("errorCode = $errorCode")
         }
     }
 
@@ -34,9 +32,6 @@ abstract class BaseRepository {
             async {
                 call.invoke()
             }
-        }.apply {
-            val await = await()
-            LogJ.d("errorCode = ${await.errorCode}")
         }
     }
 
